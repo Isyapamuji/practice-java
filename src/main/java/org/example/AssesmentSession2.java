@@ -1,18 +1,19 @@
 package org.example;
 import java.util.Scanner;
 
-public class ShapeDrawerPracticalAssesmentSession2 {
+public class AssesmentSession2 {
+    Scanner scanner = new Scanner(System.in); //masukkin user input
 
     public static void main(String[] args) {
        // infinite loop
+        AssesmentSession2 drawer = new AssesmentSession2();
         while(true){
-            menu();
+            drawer.menu();
         }
     }
-    public static void menu(){
-        Scanner scanner = new Scanner(System.in); //masukkin user input
+    public void menu() {
 
-        System.out.println("Welcome to Shape Drawer!");
+        System.out.println("Welcome to ASCII Shape Drawer!");
         System.out.println("1. Triangle");
         System.out.println("2. Square");
         System.out.println("3. Rectangle");
@@ -20,6 +21,9 @@ public class ShapeDrawerPracticalAssesmentSession2 {
 
         System.out.print("Please select a shape (1/2/3/4): ");
         int choice = scanner.nextInt();
+        logicMenu(choice);
+    }
+    public void logicMenu(int choice){
 
 
         switch (choice) {
@@ -48,7 +52,7 @@ public class ShapeDrawerPracticalAssesmentSession2 {
         }
         //scanner.close();
     }
-    public static void drawTriangle(int size) {
+    public void drawTriangle(int size) {
         for (int i = 1; i <= size; i++) {
             for (int j = 1; j <= size - i; j++) {
                 System.out.print(" ");
@@ -60,7 +64,7 @@ public class ShapeDrawerPracticalAssesmentSession2 {
         }
     }
 
-    public static void drawSquare(int size) {
+    public void drawSquare(int size) {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 System.out.print("*");
@@ -69,7 +73,7 @@ public class ShapeDrawerPracticalAssesmentSession2 {
         }
     }
 
-    public static void drawRectangle(int width, int height) {
+    public void drawRectangle(int width, int height) {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 System.out.print("*");
