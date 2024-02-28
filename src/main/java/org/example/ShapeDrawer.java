@@ -34,11 +34,9 @@ public class ShapeDrawer {
             for (int k = 1; k <= (2 * i - 1); k++) {
                 System.out.print("*");
             }
-
             // Move to the next line after each row
             System.out.println();
         }
-
     }
     public void drawShape(int choice){
         switch (choice){
